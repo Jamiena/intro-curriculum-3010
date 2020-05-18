@@ -1,9 +1,10 @@
 'use strict';
 // key: タスクの文字列 value: 完了しているかどうかの真偽値
 let tasks = new Map();
-
-const fs = require('fs');
 const fileName = './tasks.json';
+const fs = require('fs');
+
+
 
 // 同期的にファイルから復元
 try {
@@ -12,6 +13,7 @@ try {
 } catch (ignore) {
 	console.log(fileName + 'から復元できませんでした');
 }
+
 
 /**
  * タスクをファイルに保存する
